@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 	<package name="admin" extends="app_default" namespace="/admin">
+	 
+		<action name="index" class="com.dh.ora.s004.action.AdminAction" method="index">
+			<result name="login_init" >/s004/login.jsp</result>
+		</action>
+		<action name="login" class="com.dh.ora.s004.action.AdminAction" method="login">
+			<result name="login" >/s004/login.jsp</result>
+			<result name="index" >/s004/index.jsp</result>
+		</action>
+		
+		<action name="productkind" class="com.dh.ora.s004.action.ProductKindAction" method="index">
+			<!--<result name="init" >/s004/product_kind_index.jsp</result>-->
+			<result name="init" >/s004/product_kind_list.jsp</result>
+		</action>
+		<action name="productattr" class="com.dh.ora.s004.action.ProductKindAction" method="initattr">
+			<result name="init" >/s004/product_kind_attr.jsp</result>
+		</action>
+		
+		<action name="add_kind" class="com.dh.ora.s004.action.ProductKindAction" method="addKind"/>
+		<action name="add_section" class="com.dh.ora.s004.action.ProductKindAction" method="addSection"/>
+		<action name="add_attr" class="com.dh.ora.s004.action.ProductKindAction" method="addAttr"/>
+		
+		<action name="load_tree" class="com.dh.ora.s004.action.ProductKindAction" method="loadKindTree">
+			<result name="kind_tree">/common/kindtree.jsp</result>
+		</action>
+		
+		<action name="section_tree" class="com.dh.ora.s004.action.ProductKindAction" method="loadSectionTree">
+			<result name="section_tree">/common/sectiontree.jsp</result>
+		</action>
+		
+		<action name="kind_section_list" class="com.dh.ora.s004.action.ProductKindAction" method="kindSecList">
+			<result name="list">/s004/product_kind_index.jsp</result>
+		</action>
+		<action name="kind_attr_list" class="com.dh.ora.s004.action.ProductKindAction" method="kindAttrList">
+			<result name="list">/s004/product_kind_attr.jsp</result>
+		</action>
+		<action name="product_list" class="com.dh.ora.s004.action.ProductKindAction" method="productList">
+			<result name="list">/s004/product_list.jsp</result>
+		</action>
+		<!-- 审核 上下架 -->
+		<action name="auditPass" class="com.dh.ora.s003.action.ProductAction" method="auditPass">
+			 <result name="ok" >/s004/msg.jsp</result>
+		</action>
+		<action name="auditNoPass" class="com.dh.ora.s003.action.ProductAction" method="auditRefuse">
+			 <result name="ok" >/s004/msg.jsp</result>
+		</action>
+		<action name="putOnShelves" class="com.dh.ora.s003.action.ProductAction" method="putOnShelves">
+			 <result name="ok" >/s004/msg.jsp</result>
+		</action>
+		<action name="pullOffShelves" class="com.dh.ora.s003.action.ProductAction" method="pullOffShelves">
+			 <result name="ok" >/s004/msg.jsp</result>
+		</action>		
+		
+		
+		<action name="init_product_list" class="com.dh.ora.s004.action.ProductKindAction" method="initProList">
+			<result name="init">/s004/product_list.jsp</result>
+		</action>
+		
+		<action name="kind_list_json" class="com.dh.ora.s004.action.ProductKindAction" method="productKind"/>
+		
+		<action name="default_page" class="com.dh.ora.s004.action.DefaultPageAction" method="index">
+				<result name="index" type="freemarker">/ftl/index.ftl</result>
+		</action>
+		<action name="toadvlist" class="com.dh.ora.s004.action.DefaultPageAction" method="toAdvList">
+				<result name="adv_list" type="freemarker">/ftl/s004/adv_list.ftl</result>
+		</action>
+		<action name="toadvmsg" class="com.dh.ora.s004.action.DefaultPageAction" method="toAdvMsg">
+				<result name="adv_msg" type="freemarker">/ftl/s004/adv_msg.ftl</result>
+				<result name="error" type="freemarker">/ftl/error.ftl</result>
+		</action>		
+		<action name="default_manage" class="com.dh.ora.s004.action.DefaultPageAction" method="managerftl">
+				<result name="ftl_list" type="freemarker">/ftl/s004/adv_msg.ftl</result>
+				<result name="ftr_attr" type="freemarker">/ftl/s004/adv_msg.ftl</result>
+				<result name="ftr_list" type="freemarker">/ftl/error.ftl</result>
+		</action>
+		<action name="ftl_atrlist" class="com.dh.ora.s004.action.DefaultPageAction" method="ftlatrlist">
+				<result name="atr_list" type="freemarker">/ftl/s004/ftl_atr_list.ftl</result>
+		</action>
+		<action name="ftlatr" class="com.dh.ora.s004.action.DefaultPageAction" method="opftlatrmsg">
+				<result name="atr_msg" type="freemarker">/ftl/s004/ftl_atr_msg.ftl</result>
+		</action>		
+		<action name="topage" class="com.dh.ora.s004.action.DefaultPageAction" method="indexToHtml"/>
+		
+			
+		<action name="shopcfg" class="com.dh.ora.s004.action.AdminAction" method="shopCfg">
+			<result name="shopcfg" type="freemarker">/ftl/s004/shop_cfg.ftl</result>
+		</action>
+		<action name="meta_*" class="com.dh.ora.s004.action.AdminAction" method="meta_{1}">
+			<result name="ok" type="freemarker">/ftl/s004/meta_{1}.ftl</result>
+		</action>
+		<action name="mailcfg" class="com.dh.ora.s004.action.AdminAction" method="mailcfg">
+				<result name="mailcfg" type="freemarker">/ftl/s004/mail_cfg.ftl</result>
+		</action>
+		<action name="user_*" class="com.dh.ora.s004.action.AdminAction" method="userop">
+				<result name="ok" type="freemarker">/ftl/s004/user_{1}.ftl</result>
+		</action>
+
+		<action name="view_*_*" class="com.dh.ora.s004.action.AdminAction" method="view">
+			<result name="ok" >/HTML/{1}/{1}-{2}.htm</result>
+		</action>
+ 			
+ 		<!-- 快递公司相关 -->	
+		<action name="courier_*" class="com.dh.ora.s004.action.CourierAction" method="{1}">
+			<result name="msg"   type="freemarker">/ftl/s004/courier_msg.ftl</result>
+			<result name="list"  type="freemarker">/ftl/s004/courier_list.ftl</result>
+			<result name="zonelist"  type="freemarker">/ftl/s004/courier_zone_list.ftl</result>
+			<result name="zone"  type="freemarker">/ftl/s004/courier_zone.ftl</result>
+			<result name="countrylist"  type="freemarker">/ftl/s004/country_list.ftl</result>
+		</action>		
+		 		
+		<action name="protoco_*" class="com.dh.ora.s004.action.AdminAction" method="{1}">
+			<result name="list"  type="freemarker">/ftl/s004/protol_list.ftl</result>
+		</action>	
+				 		
+		<!-- kindlist -->	
+		<action name="model_*" class="com.dh.ora.s004.action.AdminAction" method="{1}">
+			<result name="kindlist" type="freemarker">/ftl/s004/kindlist.ftl</result>
+			<result name="tplmsg" type="freemarker">/ftl/s004/tpl_kind_msg.ftl</result>
+		</action>	 		
+				 	
+		<action name="emodel_prview_*" class="com.dh.ora.s004.action.AdminAction" method="preview">
+			<result name="msg" type="freemarker">/ftl/model/model_{1}.ftl</result>
+		</action>
+		
+		<action name="emodel_genHtml_*" class="com.dh.ora.s004.action.AdminAction" method="genHtml"/>
+		
+		<!-- 二级菜单  -->
+		<action name="sm_*" class="com.dh.ora.s004.action.AdminAction" method="{1}">
+			<result name="list" type="freemarker">/ftl/s004/submenu_list.ftl</result>
+			<result name="msg" type="freemarker">/ftl/s004/submenu_msg.ftl</result>
+		</action>
+		
+		<!-- 搜索界面 -->
+		<action name="search_*" class="com.dh.ora.s004.action.AdminAction" method="{1}">
+			<result name="list" type="freemarker">/ftl/s004/submenu_list.ftl</result>
+			<result name="msg" type="freemarker">/ftl/s004/submenu_msg.ftl</result>
+		</action>				
+				
+	</package>
+
+</struts>
+

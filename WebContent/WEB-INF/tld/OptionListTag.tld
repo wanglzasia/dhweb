@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2eeweb-jsptaglibrary_2_0.xsd" version="2.0"> 
+
+       <tlib-version>2.0</tlib-version>
+  		<jsp-version>2.0</jsp-version>
+        <short-name>OptionList</short-name>
+   <tag>
+
+		<name>OptionList</name>
+		<tag-class>com.x.orange.tag.OptionListTag</tag-class>
+		 <body-content>jsp</body-content>
+   	
+		<attribute>
+		 	<name>name</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		 	<name>id</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		 	<name>style</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		 	<name>cssclass</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		 	<name>table</name>
+		 	<required>true</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+		 	<name>colum</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+		 	<name>value</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>	
+		<attribute>
+		 	<name>key</name>
+		 	<required>true</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		 	<![CDATA[
+		 		<option>key</option>
+		 	]]>
+		</attribute>	
+		<attribute>
+		 	<name>code</name>
+		 	<required>true</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		 	<![CDATA[
+		 		<option value=code>key</option>
+		 	]]>
+		</attribute>
+		<attribute>
+		 	<name>keyAlis</name>
+		 	<required>true</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		 	<name>order</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+ 	</tag>
+</taglib>

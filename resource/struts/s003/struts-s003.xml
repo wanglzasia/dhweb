@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 	<package name="seller" extends="app_default" namespace="/seller">
+ 	
+ 		<action name="center" class="com.dh.ora.s003.action.IndexAction" method="center">
+		 	  <result name="reg" >/s003/seller_reg.jsp</result>
+		 	  <result name="main" >/s003/seller.jsp</result>
+		 	  <result name="login" >/s001/login.jsp</result>
+		</action>
+		
+ 		<action name="seller" class="com.dh.ora.s003.action.IndexAction" method="init">
+		 	  <result name="main" >/s003/seller.jsp</result>
+		</action>
+ 		
+
+		
+		<action name="add" class="com.dh.ora.s003.action.ProductAction" method="add">
+              <result name="add" >/s003/seller.jsp</result>
+        </action>
+        
+		<action name="kind_list_json" class="com.dh.ora.s004.action.ProductKindAction" method="productKind"/>
+        
+        <action name="mod" class="com.dh.ora.s003.action.ProductAction" method="modify">
+        	<result name="ok" >/s003/seller.jsp</result>
+        </action>
+        
+        <action name="addpro" class="com.dh.ora.s003.action.ProductAction" method="addpro">
+              <result name="addpro" >/s003/seller.jsp</result>
+        </action>
+  
+        <action name="order" class="com.dh.ora.s003.action.OrderAction" method="init">
+              <result name="init" >/s003/seller.jsp</result>
+        </action>
+        
+        <action name="send" class="com.dh.ora.s003.action.SendAction" method="init">
+              <result name="init" >/s003/seller.jsp</result>
+        </action>
+        
+        <action name="static" class="com.dh.ora.s003.action.StaticAction" method="init">
+              <result name="init" >/s003/seller.jsp</result>
+        </action>
+        
+        <action name="upload" class="com.dh.ora.upload.action.UpLoadAction" method="upload">
+			 <result name="msg_info" type="freemarker">/upload/msg.ftl</result>
+		</action>
+		
+        <action name="save" class="com.dh.ora.s003.action.ProductAction" method="save">
+			 <result name="prolist" >/s003/seller.jsp</result>
+		</action>
+		 
+		 <action name="show" class="com.dh.ora.s003.action.ProductAction" method="show">
+			 <result name="proshow" >/s003/seller.jsp</result>
+		</action>
+		
+		<!--
+		 <action name="auditPass" class="com.dh.ora.s003.action.ProductAction" method="auditPass">
+			 <result name="ok" >/s003/seller.jsp</result>
+		</action>-->
+		<action name="putOnShelves" class="com.dh.ora.s003.action.ProductAction" method="putOnShelves">
+			 <result name="ok" >/s004/msg.jsp</result>
+		</action>
+		<action name="pullOffShelves" class="com.dh.ora.s003.action.ProductAction" method="pullOffShelves">
+			 <result name="ok" >/s004/msg.jsp</result>
+		</action>
+		
+		
+		<action name="querypro" class="com.dh.ora.s003.action.ProductAction" method="query">
+			<result name="list" >/s003/seller.jsp</result>
+		</action>
+		
+		<action name="album" class="com.dh.ora.s003.action.AlbumAction" method="loadAlbum">
+			<result name="album" >/s003/album.jsp</result>
+		</action>
+		
+		<action name="orderlist" class="com.dh.ora.s003.action.OrderAction" method="orderList">
+			<result name="orderlist" >/s003/seller.jsp</result>
+		</action>
+		
+		<action name="orderfav" class="com.dh.ora.s003.action.OrderAction" method="orderFav">
+			<result name="orderfav" >/s003/seller.jsp</result>
+		</action>
+		
+		<action name="getfavalue" class="com.dh.ora.s003.action.OrderAction" method="getOrderFav"/>
+	
+		<action name="chgorderp" class="com.dh.ora.s003.action.OrderAction" method="chgOrderPrice">
+			<result name="orderfav" >/s003/seller.jsp</result>
+		</action>
+		
+		<action name="todelorder" class="com.dh.ora.s003.action.OrderAction" method="delOrderMain">
+			<result name="orderdel" >/s003/seller.jsp</result>
+		</action>
+		
+		<action name="delorder" class="com.dh.ora.s003.action.OrderAction" method="delOrder">
+			<result name="msg" >/s003/seller.jsp</result>
+		</action>
+				
+		<!-- 物流相关 -->
+		<action name="os_*" class="com.dh.ora.s003.action.OrderAction" method="{1}">
+			<result name="msg" >/s003/seller.jsp</result>
+		</action>		
+		
+		<action name="view_*_*" class="com.dh.ora.s003.action.ProductAction" method="view">
+			<result name="ok" >/HTML/{1}/{1}-{2}.htm</result>
+		</action>		
+		
+		<action name="ship_*" class="com.dh.ora.s004.action.CourierAction" method="{1}">
+			<result name="ok" >/s003/seller.jsp</result>
+		</action>			
+	
+	 	<!-- 快递公司相关 -->	
+		<action name="courier_*" class="com.dh.ora.s004.action.CourierAction" method="{1}">
+		</action>
+		
+	</package>
+	
+	
+ 
+ 
+
+ 
+</struts>
+

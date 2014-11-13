@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+ 	<constant name="struts.action.extension" value="do" />
+ 	<!-- 开发模式下使用,这样可以打印出更详细的错误信息 -->    
+ 	<constant name="struts.devMode" value="false" />      
+ 	<!--解决乱码    --> 
+ 	<constant name="struts.i18n.encoding" value="UTF-8" />    
+ 	<!-- 指定允许上传的文件最大字节数。默认值是2097152(2M) -->    
+ 	<constant name="struts.multipart.maxSize" value="10701096"/>    
+	<constant name="struts.multipart.maxSize" value="102400000000"/>
+	
+	<constant name="struts.custom.i18n.resources" value="messageResources"/>
+	
+	<package name="app_default" namespace="/" extends="struts-default">	
+		
+		<interceptors>
+		           <!-- 先定义拦截器 -->
+		           <interceptor name="myInterceptor" class="com.x.orange.servlet.RequestInterceptor"/>
+		           <!-- 加到自己设置的拦截器栈里边去 -->
+		           <interceptor-stack name="myStack">
+					  <interceptor-ref name="myInterceptor"/>
+					  <interceptor-ref name="defaultStack"/>
+		           </interceptor-stack>
+		</interceptors> 
+			<default-interceptor-ref name="myStack"/>	
+			
+		<global-results>
+			<result name="gl_error" type="freemarker">/ftl/error.ftl</result>
+			<result name="gl_msg" type="freemarker">/ftl/msg.ftl</result>
+		</global-results>
+			
+    </package>
+    
+</struts>

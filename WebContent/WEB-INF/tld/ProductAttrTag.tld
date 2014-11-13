@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2eeweb-jsptaglibrary_2_0.xsd" version="2.0"> 
+
+       <tlib-version>2.0</tlib-version>
+  		<jsp-version>2.0</jsp-version>
+        <short-name>ProAttr</short-name>
+   <tag>
+
+		<name>ProAttr</name>
+		<tag-class>com.dh.ora.tld.ProductAttrTag</tag-class>
+		 <body-content>jsp</body-content>
+		 <!-- type 是否带值 0不带 1带 -->
+		<attribute>
+		 	<name>type</name>
+		 	<required>true</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<!-- usr 语言:0英文 1中文 -->
+		<attribute>
+		 	<name>usr</name>
+		 	<required>true</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+		 	<name>kindCode</name>
+		 	<required>true</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+		 	<name>productId</name>
+		 	<required>false</required>
+		 	<rtexprvalue>true</rtexprvalue>
+		</attribute>
+ 	</tag>
+</taglib>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 	<package name="addr" extends="app_default" namespace="/">
+	 
+		<action name="addAddr" class="com.dh.ora.s009.action.AddrAction" method="addAddr">
+			<result name="ok" >/s006/welcome.jsp</result>
+		</action>
+		
+		<action name="loadAddAddr" class="com.dh.ora.s009.action.AddrAction" method="loadAddAddr">
+			<result name="ok" >/s009/addAddr.jsp</result>
+		</action>
+		
+		<action name="addAddr_ajax" class="com.dh.ora.s009.action.AddrAction" method="addAddr_ajax">
+			
+		</action>
+		
+	</package>
+
+</struts>
+

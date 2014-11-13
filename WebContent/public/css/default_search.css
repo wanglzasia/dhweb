@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+body{margin:0 auto;padding:0;color:#2d374b;font-size:12px;font-family: Arial, Helvetica, sans-serif,HELVETICA;background:#fff;}
+#top_nav{BORDER-BOTTOM: #e8e8e8 1px solid;HEIGHT: 30px;COLOR:#666666;background-color:#F7F7F7;}
+#welcell{float:left;margin-top:10px;margin-left:50px;}
+#regcell{float:right;margin-top:10px;margin-right:50px;}
+/*TOP_MAIN*/
+#top_main{width:1132px; HEIGHT:70px; margin:0 auto;}
+#head_logo{float:left; left:0px; width: 221px; min-height:41px;margin-top:12px;background: url(../img/logo.png) no-repeat;}
+#head_search{float:left;  margin-left:50px;margin-top:20px; width: 550px; height:35px;color:#2d374b;}
+#head_search_form{background-color:#FF5500;color:#2d374b}
+#head_search_input{width:440px; height:10px;BORDER: #FF5500 2px solid ;outline:none;font-size:12px;line-height:12px;vertical-align: top; padding:10px 10px 10px;autocomplete:off;}
+#head_search_btn{height:34px;width:80px;color:#fff;background-color:#FF5500;border:none;outline:none;cursor:pointer;font-size:14px;}
+/*SHOP_CART*/
+#head_action{float:right;min-height:41px;min-width:41px;margin-top:12px;margin-right:150px;position:relative;color:#2d374b;background: url(../img/cart.gif) no-repeat;}
+#buy_cart{border: solid 1px #999;background-color:#fff;box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.1);}
+.js-loading {padding-left: 180px;color:#999;width: 188px;height: 118px;line-height: 118px;background: #fff url(/public/img/loading.gif) no-repeat 200px 50px;}
+.cart_style{width:100%;color:#2d374b;table-layout:fixed;empty-cells:show; border-collapse: collapse;margin:0 auto;}
+.cart_style tr {background: #FFF;line-height: 22px;}
+.cart_style tr td{background: #FFF;line-height: 22px;}
+.cart_style td {line-height: 22px;padding:3px 3px 3px 3px;}
+.cart_style .cart_price{color:#FF5500;text-align:right;}
+.cart_style .char_pname{overflow:hidden;}
+.js-list{min-height: 118px;color:#FF5500;}
+.btn_cart a {display:block;background-color:#FF5500;color:#fff;text-decoration: none;width:120px;padding:2px 2px 2px 2px;text-align:center;}
+.btn_cart a:hover{background-color:#A40000;}
+.head-cart-prompt{padding: 0px;text-align: center;line-height: 24px;}
+.head-cart-pro {position: absolute;right: 0;top: 40px;width: 368px;}
+.js-empty{color:#2d374b;}
+
+/*MENU_BAR*/
+#menu_bar{background-color:#FF5500;height:40px;}
+#menu_inner_bar{width:1132px;margin:0 auto;height:40px;}
+.span_1 span{display:block;float:left;height:40px;padding-left:10px;padding-right:10px;line-height:40px;text-align:center;cursor:pointer;color:#fff;}
+.span_1 span:hover{background-color:green;}
+.span_1 span a{text-decoration: none;color:#FFF;}
+.CATEGORIES{width:200px;margin:0 auto;font: 700 15px/40px "microsoft yahei";line-height:35px;}
+ol, ul {list-style: none;padding:0px;margin:0px;}
+img{border:0px;}
+.kind_tree{background-color:#fff;width:218px;z-index:100;position:absolute;margin-top:40px;border-left:1px solid #FF5500;border-right:1px solid #FF5500;border-bottom:1px solid #FF5500;display:none;}
+.kind_tree ul{padding-top:10px;padding-bottom:10px;}
+.kind_tree ul li{display: list-item;line-height:25px;background:url(http://css.dhresource.com/buyer/home/image/homepage.png?v=20140714) no-repeat 210px -39px;border-top:1px solid #FFF;border-bottom:1px solid #FFF;}
+.kind_tree ul li:hover{border-top:1px solid #FF5500;border-bottom:1px solid #FF5500;background:url(http://css.dhresource.com/buyer/home/image/homepage.png?v=20140714) no-repeat 210px -56px;}
+.kind_tree ul li a {text-decoration:none;color:#2d374b;font-size:12px;font-family: Arial, Helvetica, sans-serif,HELVETICA;display:block;padding-left:20px;}
+
+.sub-category{display:none;position:absolute;float:left;margin-left:218px;min-height:400px;top:0px;background-color:#fff;border:1px solid #FF5500;width:200px;z-index:1001;}
+.nav-subcate-le{margin:0 auto;z-index:1002;}
+.nav_subcate_le_title{font-color:#FFF;}
+.nav_subcate_le_title span{background-color:#FF5500;color:#fff;display:block;line-height:30px;padding-left:10px;font-size:14px;}
+
+.show_center_body{background-color:#F5F5F5;padding-bottom:20px;}/*#f2f2f2*/
+.show_box{margin:0 auto;width:1132px;}
+.show_box_body{clear:both;}
+.show_box_nav{line-height:35px;}
+#left_box{width:180px;float:left; background-color:#fff;border:1px solid #e9e9e9;padding-left:10px;padding-right:10px;padding-bottom:10px;}
+#left_box .title_head{border-bottom:1px solid #e9e9e9;}
+#left_box .body_head{border-bottom:1px solid #e9e9e9;}
+#center_box{width:906px;float:left;margin-left:10px;}
+#right_box{width:200px;float:left;margin-left:10px;}
+#search_box{height:100px;}
+
+/*产品列表*/
+#pro_list{border:1px solid #e9e9e9; padding-left:20px;padding-top:20px;padding-right:0px;background-color:#fff;}
+.p_msg{border:1px solid #e9e9e9;width:182px;padding:10px;float:left;margin-right:15px;margin-bottom:20px;}
+.p-img{ margin-bottom:5px;}
+.p-img img{width: 182px; height: 146px;}
+.p_title{display: block;line-height: 18px;height: 36px;font-size: 14px;margin-right: 8px;overflow: hidden;}
+.p_price{font-size: 12px;color: #666;font-weight: 100;}
+.p_price span{font-size: 14px;color: #900;font-weight: 700;}
+.p_op{color: #693a0d;text-align: center;padding-top:4px;padding-bottom:4px;border-radius: 3px;background: #ffe9c3;box-shadow: 0 2px 1px rgba(234,195,110,.55);border: 1px solid #f2cc68;border-bottom-color: #e1a82b;cursor: pointer;outline: none;width:80px;}
+.p_op a{text-decoration:none;color:#693a0d;}
+.p_op a:hover{color:red;}
+ 
+.margin_t_10{margin-top:10px;}
+
+
+
+
+#footer{margin-top:0px;height:200px; background-color:#F5F5F5; color:#2d374b;border-top:#CCCCCC 1px solid}
+

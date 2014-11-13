@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="member" extends="app_default" namespace="/member">
+	
+		<action name="center" class="com.dh.ora.s006.action.MemberAction" method="center">
+			<result name="index" >/s006/index.jsp</result>
+		</action>
+		
+		<action name="queryShoppingCart" class="com.dh.ora.s006.action.ShoppingCartAction" method="queryShoppingCart">
+			<result name="shoppingcart" >/s006/shoopingCart.jsp</result>
+		</action>
+		<!-- 
+		<action name="addShoppingCart" class="com.dh.ora.s006.action.ShoppingCartAction" method="addShoppingCart">
+		</action>
+		 -->
+		<action name="addCart" class="com.dh.ora.s006.action.ShoppingCartAction" method="fillCart">
+			<result name="ok">/s006/cart_op_msg.jsp</result>
+		</action>	
+		<action name="rmcp" class="com.dh.ora.s006.action.ShoppingCartAction" method="removePro">
+			<result name="ok">/s006/cart_op_msg.jsp</result>
+		</action>		
+		
+		<action name="updateShoppingCartCount" class="com.dh.ora.s006.action.ShoppingCartAction" method="updateShoppingCartCount">
+		</action>
+		
+		<action name="deleteShoppingCart" class="com.dh.ora.s006.action.ShoppingCartAction" method="deleteShoppingCart">
+		</action>
+		
+		<action name="shopchart" class="com.dh.ora.s006.action.MemberAction" method="shopchart">
+			<result name="shoppingcart" >/s006/index.jsp</result>
+		</action>			
+		
+		<action name="orderConfirmationBatch" class="com.dh.ora.s008.action.OrdersAction" method="orderConfirmationBatch">
+			<result name="ok" >/s008/orderConfirmation.jsp</result>
+		</action>
+		
+		<action name="address" class="com.dh.ora.s006.action.MemberAction" method="address">
+			<result name="addrlist" >/s006/index.jsp</result>
+		</action>		
+		
+		<action name="toaddress" class="com.dh.ora.s006.action.MemberAction" method="toaddaddress">
+			<result name="addrmsg" >/s006/index.jsp</result>
+		</action>		
+		
+		<action name="orderlist" class="com.dh.ora.s006.action.MemberAction" method="orderlist">
+			<result name="orderlist" >/s006/index.jsp</result>
+		</action>				
+		
+		<action name="orderpay" class="com.dh.ora.s006.action.MemberAction" method="orderPay">
+			<result name="ok" >/s006/index.jsp</result>
+		</action>
+		
+		<!-- 订单流转信息 -->
+		<action name="orderdetail" class="com.dh.ora.s006.action.MemberAction" method="orderFlow">
+			<result name="orderdetail" >/s006/index.jsp</result>
+		</action>			
+		
+		<!-- 订单确认-->
+		<action name="confirmReceipt" class="com.dh.ora.s006.action.MemberAction" method="confirmReceipt">
+			<result name="msg">/s006/index.jsp</result>
+		</action>	
+		<!-- 删除订单 -->		
+		<action name="removeOrder" class="com.dh.ora.s006.action.MemberAction" method="removeOrder">
+			<result name="msg">/s006/index.jsp</result>
+		</action>		
+		
+	</package>
+	
+</struts>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:tx="http://www.springframework.org/schema/tx"	
+	   xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+       ">
+
+
+
+	<bean id="dataSource" class="com.x.orange.dao.jdbc.JdbcDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/test" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="springJdbcDao" class="com.x.orange.dao.jdbc.SpringJdbcDao">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<bean id="jdbcDao" class="com.x.orange.dao.jdbc.JdbcDao" />
+	
+
+	<!-- jdbc事务管理器 -->  
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+	  <property name="dataSource">  
+	    <ref bean="dataSource"/>  
+	  </property>  
+	</bean>
+	
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">  
+	    <property name="transactionManager">  
+	      <ref bean="transactionManager"/>  
+	    </property>  
+	    <property name="transactionAttributes">  
+	      <props>  
+	        <prop key="exec*">PROPAGATION_REQUIRED</prop>  
+	      </props>  
+	    </property>  
+    </bean>  
+  
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">  
+	    <property name="beanNames">  
+	      <list>  
+	        <value>springJdbcDao</value>  
+	      </list>  
+	    </property>  
+	    <property name="interceptorNames">  
+	      <list>  
+	        <value>transactionInterceptor</value>  
+	      </list>  
+	    </property>  
+  	</bean>
+  	
+</beans>

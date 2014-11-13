@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+<script type="text/javascript" src="/HTML/public/js/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="/HTML/public/css/item.css" type="text/css" />
+<title>Wholesale - USB Dual Port Car Charger Charger</title>
+<style type="text/css">			
+.windowdiv {
+	position: absolute;
+	background-color: gray;
+	height: 400px;		
+	border: 0;			
+}
+
+.windowtable {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.closetd {				
+	background-color: purple;
+	font-family: "黑体";
+	cursor: pointer;
+	width: 1%;
+	height: 1%;
+}
+
+.windowframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+</style>
+ 
+<script type="text/javascript" >
+$(document).ready($(function(){
+    var $div_li =$("#tabnav li");
+    var objArray =["#pro_detail_des","#pro_package","#pro_com_profile"];
+    
+    
+   	var name="loginno";
+	var loginName="";
+	var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    if(arr=document.cookie.match(reg)){
+    	loginName = unescape(arr[2]);
+    }
+	if(loginName!=""){
+		$("#reg_span").html("");
+		$("#log_span").html("");
+		$("#tip_span").html("Welcome "+loginName);
+	}
+      
+    $("#addShoppingCart").click(function(){
+    $.post("/shoppingcart/addShoppingCart.html",
+    	{
+    		product_id:$("#product_id").val(),
+    		product_img:$("#product_img").val(),
+    		product_name:$("#product_name").val(),
+    		product_note:$("#product_note").val(),
+    		product_count:$("#product_count").val(),
+    		product_value:$("#product_value").val(),
+    		seller_id:$("#seller_id").val()
+    		
+    	},
+    	function(msg){
+    		alert(msg+"");
+    	});
+    });
+  
+    $div_li.click(function()
+    {
+		$(this).addClass("selected").siblings().removeClass("selected");  
+         var index =  $div_li.index(this);
+         
+         for(i = 0 ;i<objArray.length;i++){
+         	if( i != index ){
+         	    obj = objArray[i];
+         		$(obj).attr("class", "hidden_info");
+         	}
+         }
+         obj  = objArray[index];
+         $(obj).attr("class", "show_info");         
+          
+	}).hover(function(){
+		$(this).addClass("hover");
+	},function(){
+		$(this).removeClass("hover");
+	})
+})
+);
+function chgImg(obj)
+{
+	obj = "#"+obj;
+	pic = $(obj).attr("src");
+	$("#bigImg").attr("src",pic);
+}
+</script>
+</head>
+
+<body>
+<form method="post" name="form1" id="form1" action="/orderConfirmation/orderConfirmationSingle.html">
+<div id="header">
+	<div id="logo"></div>
+	<div id="buy_info">
+		<span id="reg_span"><a href="/reg.html">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span id="log_span"><a href="/log.html">登陆</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span id="member_span"><a href="/member/center.html">买家中心</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span id="member_span"><a href="/member/shopchart.html">购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span id="tip_span"></span>
+		
+	</div>
+</div>
+<!--<div id="navigation">navigation</div>-->
+
+<div>
+	<div id="left_menu_box"></div>
+	
+	<div id="content">
+		<!--<div id="nav">Wholesale - USB Dual Port Car Charger Charger</div>-->
+		
+		<div id="pro_detail_left">
+		
+			<div class="jqzoom" align="center">
+				<img src="" class="big_pic" id="bigImg"/>
+			</div>
+			
+			<div id="smallimg">
+				<ul class="imgList">
+					<li><img id="img2" src="" alt="" onclick="chgImg('img2')"/></li>
+					<li><img id="img3" src="" alt="" onclick="chgImg('img3')"/></li>
+					<li><img id="img4" src="" alt="" onclick="chgImg('img4')"/></li>
+					<li><img id="img5" src="" alt="" onclick="chgImg('img5')"/></li>
+					<li><img id="img6" src="" alt="" onclick="chgImg('img6')"/></li>
+				</ul>
+			</div>
+	 
+		</div>
+		
+		<div id="pro_detail_right">
+			<div id="pro_no_name">Wholesale - USB Dual Port Car Charger Charger</div>
+			<div id="pro_no_desc"></div>
+			<div id="pro_no_cell"><label>No:</label>&nbsp;&nbsp;1000000100</div>
+			<div id="pro_no_brand"><label>Brand:</label>&nbsp;&nbsp;</div>
+			
+			<div id="pro_no_price">
+			<table id="pricetable" ><tr><th class="p_first_th">Qty</th><th class="p_second_th">Price</th></tr><tr><td>1 - 10</td><td>US $10.0</td></tr><tr><td>11 - 20</td><td>US $9.0</td></tr><tr><td>21 - 30</td><td>US $8.0</td></tr><tr><td>31 - 999999</td><td>US $7.0</td></tr></table>
+			</div>
+			
+			<div id="pro_no_brand"><label>Quantity:</label>
+				<button type="button" id="subcbtn">−</button>
+					<input type="text" name="product_count" id="product_count"  value="1" maxlength="9" data-max="1000"/>
+				<button type="button" id="addcbtn">+</button>
+			</div>
+			<div id="pro_no_brand">
+				<input id="buyProduct" name="buyProduct" type="submit" value="Buy Now" />
+				<input id="addShoppingCart" name="addShoppingCart" type="button" value="Add To Cart" />
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+		<div id="nav1">
+			<ul id="tabnav">
+				<li class="selected">Product Detail</li>
+				<li>Package Message</li>
+				<li>Company profile</li>
+			</ul>
+		
+		</div>
+		
+		 <p id="#pro_info_msg">
+			<div id="pro_detail_des"  class="show_info"><br><br>ScreenInch&nbsp;&nbsp;:&nbsp;&nbsp;-&nbsp;&nbsp;dcdx&nbsp;&nbsp;:&nbsp;&nbsp;-&nbsp;&nbsp; <br> </div>
+			<div id="pro_package"     class="hidden_info">
+				Length: CM <br>
+				Width: CM <br>
+				Height: CM <br>
+				Weight: Kg
+			</div>
+			<div id="pro_com_profile" class="hidden_info">1</div>		
+		<p>
+		
+	</div>
+</div>
+
+
+
+
+<div id="footer">
+	<div style="margin:0 auto;width:100%;text-align:center; min-height:200px;padding-top:20px;">
+		<div class="site-links">
+		            <a href="http://seller.dhgate.com/news/sf1.html" target="_parent" rel="nofollow">关于我们</a>|
+		            <a href="http://seller.dhgate.com/help/contactService.html" target="_parent" rel="nofollow">联系客服 </a>|
+		            <a href="http://hr.dhgate.com/" target="_parent">招贤纳士</a>|
+		            <a href="http://seller.dhgate.com/news/sf3.html" target="_parent" rel="nofollow">隐私说明 </a>|
+		            <a href="http://seller.dhgate.com/news/sf4.html" target="_parent" rel="nofollow">服务条款</a>|
+		            <a href="http://seller.dhgate.com/edu" target="_parent">ChinaDirectSale动力营</a>  |
+		            <a href="http://seller.dhgate.com/sellersitemap.html " target="_parent">网站地图</a>|
+		            <a href="http://seller.dhgate.com/pifa.html " target="_parent">产品示例</a>
+		</div>
+		<div class="copyright">
+		            Copyright Notice © 2004 - 2013 ChinaDirectSale.com All rights reserved.<br />京ICP证050092号
+		</div>
+	</div>
+</div>
+</form>
+</body>
+</html>
+
+

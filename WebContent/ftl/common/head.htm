@@ -1,0 +1,201 @@
+<div id="body_div">
+		
+		<!---section 1-->
+		<div id="top_nav">
+			<div id="welcell">
+				<span id="weltip"></span>
+				<span id="logout_tip" stype="display:none;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout.do">Quit!</a></span>
+			</div>
+			<div id="regcell">
+				<span id="log_span"><a href="/log.do">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="seller_span"><a href="/seller/center.do">Seller</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="buyer_span"><a href="/member/center.do">Buyer</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="buycar_span"><a href="/member/queryShoppingCart.do">Shopping Cart</a></span>
+			</div>
+		</div>
+		
+		<!--section 2-->
+		<div id="top_main">
+			
+			<div id="head_logo"></div>
+			
+			<div id="head_search">
+				<div>
+					<form id="head_search_form" action="/psearch.do" >
+						<input type="text" name="keyword" id="head_search_input" value=""/>
+						<input type="submit" value="Search" id="head_search_btn"/>
+					</form>
+				</div>
+			</div>
+			
+			<!--section 2-1-->
+			<div id="head_action">
+				
+			</div>
+		
+			<!--section 2-2-->
+			<div id="buy_cart" class="head-cart-pro head-cart-prompt" style="display:none;z-index:10;">
+		       <b class="cart-up"></b>
+		       <div class="js-loading" style="display:none;">loading</div>
+		       <div class="js-empty" stype="dispaly:none"><p></p><strong>Your Shopping Cart is empty.</strong><p>If you already have an account, <a href="/log.do">sign in</a>.</p></div>
+		       <div class="js-list" style="display: none;"></div>
+		    </div>
+		</div>
+</div>
+
+<!--菜单-->
+<div id="menu_bar">
+	<div id="menu_inner_bar">
+		<span class="span_1">
+			<!--种类菜单 -->
+			<span class="CATEGORIES">
+				<div>ALL CATEGORIES</div>
+			</span>
+			<!--二级菜单  -->
+								
+				<span><a href="12">7" Android Tablets</a></span>
+				<span><a href="">Kids' Knitted Hats</a></span>
+				<span><a href="">GU10 LED Bulbs</a></span>
+				<span><a href="">Household Sundries</a></span>
+				<span><a href="">Infinity Scarves</a></span>
+				<span><a href="">Review To Win</a></span>
+		
+		</span>
+		
+		
+		<!--种类科目数 -->
+		
+		<div class="kind_tree" >
+			<ul>
+				<li class="kind_tree_li" kind_code="1001">
+					<a href="/1001.htm">Electronics</a>
+					<div class="sub-category" id="sub_kind_1001">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Electronics</span></li>
+											<li><a href="/psearch.do?kc=1015">A/V Accessories</a></li>
+											<li><a href="/psearch.do?kc=1016">Batteries &amp; Chargers</a></li>
+											<li><a href="/psearch.do?kc=1017">MP3 Players</a></li>
+											<li><a href="/psearch.do?kc=1018">Gadgets</a></li>
+											<li><a href="/psearch.do?kc=1019">Headphones &amp; Earphones</a></li>
+											<li><a href="/psearch.do?kc=1020">Home Audio &amp; Video</a></li>
+											<li><a href="/psearch.do?kc=1021">Satellite &amp; Cable TV</a></li>
+											<li><a href="/psearch.do?kc=1022">Electronic Cigarettes</a></li>
+											<li><a href="/psearch.do?kc=1023">Television Accessories</a></li>
+											<li><a href="/psearch.do?kc=1024">Solar &amp; Wind Electronics</a></li>
+											<li><a href="/psearch.do?kc=1025">Mini Speakers</a></li>
+											<li><a href="/psearch.do?kc=1026">Android TV Boxes</a></li>
+											<li><a href="/psearch.do?kc=1027">Cameras &amp; Photo</a></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1002">
+					<a href="/1002.htm">Cell Phones & Accessories</a>
+					<div class="sub-category" id="sub_kind_1002">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Cell Phones & Accessories</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1003">
+					<a href="/1003.htm">Health & Beauty</a>
+					<div class="sub-category" id="sub_kind_1003">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Health & Beauty</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1004">
+					<a href="/1004.htm">Babies, Kids, Moms & Toys</a>
+					<div class="sub-category" id="sub_kind_1004">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Babies, Kids, Moms & Toys</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1005">
+					<a href="/1005.htm">Computers & Networking</a>
+					<div class="sub-category" id="sub_kind_1005">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Computers & Networking</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1006">
+					<a href="/1006.htm">Jewelry & Watches</a>
+					<div class="sub-category" id="sub_kind_1006">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Jewelry & Watches</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1007">
+					<a href="/1007.htm">Weddings & Formal Events</a>
+					<div class="sub-category" id="sub_kind_1007">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Weddings & Formal Events</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1008">
+					<a href="/1008.htm">Automobile & Motorcycle</a>
+					<div class="sub-category" id="sub_kind_1008">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Automobile & Motorcycle</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1009">
+					<a href="/1009.htm">Apparel</a>
+					<div class="sub-category" id="sub_kind_1009">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Apparel</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1010">
+					<a href="/1010.htm">Sports & Outdoors</a>
+					<div class="sub-category" id="sub_kind_1010">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Sports & Outdoors</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1011">
+					<a href="/1011.htm">Home & Garden</a>
+					<div class="sub-category" id="sub_kind_1011">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Home & Garden</span></li>
+											<li><a href="/psearch.do?kc=1090">2</a></li>
+											<li><a href="/psearch.do?kc=1091">test1</a></li>
+											<li><a href="/psearch.do?kc=1092">test2</a></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1012">
+					<a href="/1012.htm">Lights & Lighting</a>
+					<div class="sub-category" id="sub_kind_1012">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Lights & Lighting</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1013">
+					<a href="/1013.htm">Hair & Styling</a>
+					<div class="sub-category" id="sub_kind_1013">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Hair & Styling</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+				<li class="kind_tree_li" kind_code="1014">
+					<a href="/1014.htm">Bags, Shoes & Accessories</a>
+					<div class="sub-category" id="sub_kind_1014">
+						<ul class="nav-subcate-le" >
+      							<li class="nav_subcate_le_title"><span>Bags, Shoes & Accessories</span></li>
+						</ul>		          					
+		          	</div>
+		         </li>
+			</ul>
+		</div>
+	</div>
+</div>

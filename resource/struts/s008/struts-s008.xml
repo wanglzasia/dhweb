@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 	<package name="orderConfirmation" extends="app_default" namespace="/">
+	 
+		<action name="orderConfirmationSingle" class="com.dh.ora.s008.action.OrdersAction" method="orderConfirmationSingle">
+			<result name="ok" >/s008/orderConfirmation.jsp</result>
+		</action>
+		
+		<action name="orderConfirmationBatch" class="com.dh.ora.s008.action.OrdersAction" method="orderConfirmationBatch">
+			<result name="ok" >/s008/orderConfirmation.jsp</result>
+		</action>
+		
+		<action name="confirmorder" class="com.dh.ora.s008.action.OrdersAction" method="confirOrder">
+			<result name="ok" >/s008/orderConfirmation.jsp</result>
+		</action>
+		
+		<action name="submit_orders" class="com.dh.ora.s008.action.OrdersAction" method="submit_orders">
+			<result name="ok" >/s007/payment_ok.jsp</result>
+		</action>
+		
+		<action name="pay" class="com.dh.ora.s008.action.OrdersAction" method="confirmAndPay">
+			<result name="parter" >/s007/payment_parter.jsp</result>
+		</action>	
+		
+		<action name="pay_confirm" class="com.dh.ora.s008.action.OrdersAction" method="pay">
+			<result name="ok" >/s007/payment_ok.jsp</result>
+		</action>		
+		
+ 			
+	</package>
+
+</struts>
+

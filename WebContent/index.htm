@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="/public/css/default.css" type="text/css" />
+<script type="text/javascript" src="/public/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/public/js/item.js"></script>
+
+<title>China Direct Sale</title>
+<script language="javascript">
+var times = 5000;
+var picList = null;
+var autoStart;
+<!--
+$(document).ready(function(){
+	picList = $(".show_pic");
+	setAuto(); 
+	$(".nav_box_inc").css("opacity",0.8);
+	$(".nav_box_inc").click(function(){
+		curId = parseInt($(this).html())-1;
+		showCur(curId);
+	});
+});
+
+function showCur(curId){
+	nextPic = "#p"+curId;
+	nextIndic = "#indicator_"+curId;
+	curPic = $(".show_cur_pic");
+	
+	//当前图片隐藏
+	curPic.removeClass("show_cur_pic");
+	curPic.addClass("hidden_cur_pic");
+	curPic.css("display","none");	
+	//下张图片显示
+	$(nextPic).fadeIn();
+	$(nextPic).removeClass("hidden_cur_pic");
+	$(nextPic).addClass("show_cur_pic");
+	$(nextPic).css("display","block");	
+	//指示器
+	$(".show_indicator").removeClass("show_indicator");
+	$(nextIndic).addClass("show_indicator");	
+	
+	clearInterval(autoStart);
+	setAuto(); 
+	
+}
+function playNext(){
+	iCount = picList.length;
+	var curPic = $(".show_cur_pic");
+	var curId = curPic.attr("cls_id");
+	var nextId= parseInt(curId)+1;
+	if(nextId==iCount){
+		nextId=0;
+	}
+	//当前图片隐藏
+	curPic.removeClass("show_cur_pic");
+	curPic.addClass("hidden_cur_pic");
+	curPic.css("display","none");
+	//curPic.fadeOut();
+	//下一张图片显示
+	var nextPic = "#p"+nextId;
+	$(nextPic).fadeIn();
+	$(nextPic).removeClass("hidden_cur_pic");
+	$(nextPic).addClass("show_cur_pic");
+	$(nextPic).css("display","block");
+	
+	//指示器
+	$(".show_indicator").removeClass("show_indicator");
+	var nextIndicor="#indicator_"+nextId;
+	$(nextIndicor).addClass("show_indicator");		
+}
+
+function setAuto(){
+	autoStart=setInterval("playNext()", times)
+}
+	
+//-->
+</script>
+</head>
+<body>
+
+<div id="body_div">
+
+		<!---section 1-->
+		<div id="top_nav">
+			<div id="welcell">
+				<span id="weltip"></span>
+				<span id="logout_tip" stype="display:none;">&nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout.do">Quit!</a></span>
+			</div>
+			<div id="regcell">
+				<!--
+				<span id="reg_span"><a href="/reg.do">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="log_span"><a href="/log.do">登陆</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="member_span"><a href="/seller/center.do">卖家中心</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="member_span"><a href="/member/center.do">买家中心</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span><a href="/member/shopchart.do">退出</a></span>-->
+				<!--<span id="reg_span"><a href="/reg.do"></a>&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+				<span id="log_span"><a href="/log.do">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="seller_span"><a href="/seller/center.do">Seller</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="buyer_span"><a href="/member/center.do">Buyer</a>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span id="buycar_span"><a href="/member/queryShoppingCart.do">Shopping Cart</a></span>
+			</div>
+		</div>
+		
+		<!--section 2-->
+		<div id="top_main">
+			<div id="head_logo"></div>
+			<div id="head_search">
+				<div>
+					<form id="head_search_form" action="/psearch.do" >
+						<input type="text" name="keyword" id="head_search_input" value=""/>
+						<input type="submit" value="Search" id="head_search_btn"/>
+					</form>
+			</div>
+		</div>
+		 
+		<div id="head_action">
+			
+		</div>
+		 
+		 <div id="buy_cart" class="head-cart-pro head-cart-prompt" style="display:none;z-index:10;">
+            <b class="cart-up"></b>
+            <div class="js-loading" style="display:none;">loading</div>
+            <div class="js-empty" stype="dispaly:none"><p></p><strong>Your Shopping Cart is empty.</strong><p>If you already have an account, <a href="/log.do">sign in</a>.</p></div>
+            <div class="js-list" style="display: none;"></div>
+        </div>
+        
+		</div>
+		
+		<!--section 3-->
+		<div class="w">
+			<div id="menu_section">
+				<div id="CATEGORIES_SECTION">
+					<div>ALL CATEGORIES</div>
+				</div>
+				
+				<div class="mc">
+						<div class="nav-cateList">
+		          			<ul>
+		 					
+			          				<li id="kind_1001">
+			          					<a href="/1001.htm">Electronics</a>
+				          				<div class="sub-categorys" id="sub_kind_1001">
+											<dl class="nav-subcate-le">
+				          						<dt>Electronics</dt>
+															<dd><a href="/psearch.do?kc=1015">A/V Accessories</a></dd>
+															<dd><a href="/psearch.do?kc=1016">Batteries &amp; Chargers</a></dd>
+															<dd><a href="/psearch.do?kc=1017">MP3 Players</a></dd>
+															<dd><a href="/psearch.do?kc=1018">Gadgets</a></dd>
+															<dd><a href="/psearch.do?kc=1019">Headphones &amp; Earphones</a></dd>
+															<dd><a href="/psearch.do?kc=1020">Home Audio &amp; Video</a></dd>
+															<dd><a href="/psearch.do?kc=1021">Satellite &amp; Cable TV</a></dd>
+															<dd><a href="/psearch.do?kc=1022">Electronic Cigarettes</a></dd>
+															<dd><a href="/psearch.do?kc=1023">Television Accessories</a></dd>
+															<dd><a href="/psearch.do?kc=1024">Solar &amp; Wind Electronics</a></dd>
+															<dd><a href="/psearch.do?kc=1025">Mini Speakers</a></dd>
+															<dd><a href="/psearch.do?kc=1026">Android TV Boxes</a></dd>
+															<dd><a href="/psearch.do?kc=1027">Cameras &amp; Photo</a></dd>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1002">
+			          					<a href="/1002.htm">Cell Phones & Accessories</a>
+				          				<div class="sub-categorys" id="sub_kind_1002">
+											<dl class="nav-subcate-le">
+				          						<dt>Cell Phones & Accessories</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1003">
+			          					<a href="/1003.htm">Health & Beauty</a>
+				          				<div class="sub-categorys" id="sub_kind_1003">
+											<dl class="nav-subcate-le">
+				          						<dt>Health & Beauty</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1004">
+			          					<a href="/1004.htm">Babies, Kids, Moms & Toys</a>
+				          				<div class="sub-categorys" id="sub_kind_1004">
+											<dl class="nav-subcate-le">
+				          						<dt>Babies, Kids, Moms & Toys</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1005">
+			          					<a href="/1005.htm">Computers & Networking</a>
+				          				<div class="sub-categorys" id="sub_kind_1005">
+											<dl class="nav-subcate-le">
+				          						<dt>Computers & Networking</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1006">
+			          					<a href="/1006.htm">Jewelry & Watches</a>
+				          				<div class="sub-categorys" id="sub_kind_1006">
+											<dl class="nav-subcate-le">
+				          						<dt>Jewelry & Watches</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1007">
+			          					<a href="/1007.htm">Weddings & Formal Events</a>
+				          				<div class="sub-categorys" id="sub_kind_1007">
+											<dl class="nav-subcate-le">
+				          						<dt>Weddings & Formal Events</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1008">
+			          					<a href="/1008.htm">Automobile & Motorcycle</a>
+				          				<div class="sub-categorys" id="sub_kind_1008">
+											<dl class="nav-subcate-le">
+				          						<dt>Automobile & Motorcycle</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1009">
+			          					<a href="/1009.htm">Apparel</a>
+				          				<div class="sub-categorys" id="sub_kind_1009">
+											<dl class="nav-subcate-le">
+				          						<dt>Apparel</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1010">
+			          					<a href="/1010.htm">Sports & Outdoors</a>
+				          				<div class="sub-categorys" id="sub_kind_1010">
+											<dl class="nav-subcate-le">
+				          						<dt>Sports & Outdoors</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1011">
+			          					<a href="/1011.htm">Home & Garden</a>
+				          				<div class="sub-categorys" id="sub_kind_1011">
+											<dl class="nav-subcate-le">
+				          						<dt>Home & Garden</dt>
+															<dd><a href="/psearch.do?kc=1090">2</a></dd>
+															<dd><a href="/psearch.do?kc=1091">test1</a></dd>
+															<dd><a href="/psearch.do?kc=1092">test2</a></dd>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1012">
+			          					<a href="/1012.htm">Lights & Lighting</a>
+				          				<div class="sub-categorys" id="sub_kind_1012">
+											<dl class="nav-subcate-le">
+				          						<dt>Lights & Lighting</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1013">
+			          					<a href="/1013.htm">Hair & Styling</a>
+				          				<div class="sub-categorys" id="sub_kind_1013">
+											<dl class="nav-subcate-le">
+				          						<dt>Hair & Styling</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+			          				<li id="kind_1014">
+			          					<a href="/1014.htm">Bags, Shoes & Accessories</a>
+				          				<div class="sub-categorys" id="sub_kind_1014">
+											<dl class="nav-subcate-le">
+				          						<dt>Bags, Shoes & Accessories</dt>
+											</dl>		          					
+				          				</div>
+			          				</li>
+							
+								<li id="navCat14"><a href="">More Categories</a></li>
+							</ul>
+		         		</div>
+				</div>
+				
+
+				<!--menu-->
+				<ul id="navitems-2013">
+				
+					
+						<li id="nav-home"><a href="12">7" Android Tablets</a></li>
+						<li id="nav-home"><a href="">Kids' Knitted Hats</a></li>
+						<li id="nav-home"><a href="">GU10 LED Bulbs</a></li>
+						<li id="nav-home"><a href="">Household Sundries</a></li>
+						<li id="nav-home"><a href="">Infinity Scarves</a></li>
+						<li id="nav-home"><a href="">Review To Win</a></li>
+				</ul>
+				
+				<!--section 4-->
+				<div class="adv_box">
+					
+					<div>	
+								<div id="p0" cls_id="0" class="show_pic show_cur_pic" >
+								<a href="http://www.baidu.com" target="_blank">
+								<img src="/public/flashdata/img/4239f376-301b-4222-8573-72e04d32f6b1.jpg" /></a>
+								</div>	
+								<div id="p1" cls_id="1" class="show_pic hidden_cur_pic">
+								<a  href="http://www.baidu.com" target="_blank" >
+								<img src="/public/flashdata/img/b691864a-ccf5-4ee8-aa97-2ed71c69dbcf.jpg"/>
+								</a>
+								</div>	
+								<div id="p2" cls_id="2" class="show_pic hidden_cur_pic">
+								<a  href="http://www.baidu.com" target="_blank" >
+								<img src="/public/flashdata/img/c5ae034d-8e54-4d62-8456-84890b574b4a.jpg"/>
+								</a>
+								</div>	
+								<div id="p3" cls_id="3" class="show_pic hidden_cur_pic">
+								<a  href="http://www.baidu.com" target="_blank" >
+								<img src="/public/flashdata/img/f2854005-9e0c-43df-ac94-ed26893c9be1.jpg"/>
+								</a>
+								</div>	
+								<div id="p4" cls_id="4" class="show_pic hidden_cur_pic">
+								<a  href="http://www.baidu.com" target="_blank" >
+								<img src="/public/flashdata/img/ac33fee7-535a-4b89-a1ca-0607f5900ab6.jpg"/>
+								</a>
+								</div>	
+					</div>
+	
+					<div id="nav_box">
+								<div id="indicator_4" class="nav_box_inc">5</div>
+								<div id="indicator_3" class="nav_box_inc">4</div>
+								<div id="indicator_2" class="nav_box_inc">3</div>
+								<div id="indicator_1" class="nav_box_inc">2</div>
+								<div id="indicator_0" class="nav_box_inc show_indicator">1</div>	
+					</div>
+					
+				</div>
+				
+				<!--section 5-->
+				<div class="right_box">
+					<div>
+						
+						<a href="http://www.dhresource.com/fc/s009/08182014%E9%A6%96%E9%A1%B5/228x132_140722_deals.jpg">
+							<img height="100" src="http://www.dhresource.com/fc/s009/08182014%E9%A6%96%E9%A1%B5/228x132_140722_deals.jpg" width="200">
+						</a>
+					</div>
+					<div>
+						<a href="http://www.dhresource.com/fc/s009/08182014%E9%A6%96%E9%A1%B5/228x132_140819_new---3.jpg">
+							<img height="100" src="http://www.dhresource.com/fc/s009/08182014%E9%A6%96%E9%A1%B5/228x132_140819_new---3.jpg" width="200">
+						</a>
+					</div>
+					<div>
+						<a href="http://www.dhresource.com/fc/s009/08182014%E9%A6%96%E9%A1%B5/228x132_140812_BT.jpg">
+							<img height="100" src="http://www.dhresource.com/fc/s009/08182014%E9%A6%96%E9%A1%B5/228x132_140812_BT.jpg" width="200">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--section 6 begin-->
+		<div id="content_body">
+			<div class="show_box">
+				<div class="show_title">Title1</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/082214homepage/b5.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class="clear"></div>
+			</div>
+			
+			<!--part2-->
+			<div class="show_box">
+				<div class="show_title">Title1</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<!--part3-->
+			<div class="show_box">
+			
+				<div class="show_title">Title1</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				
+				<div class='fb'>
+					<a rel="nofollow" href="http://www.dhgate.com/store/product/2014-handmade-crystal-beads-mermaid-prom/187798525.html#hp1403-bese-1">
+	          			<div class="bs-pro-img"> 
+	           				<img height="160" src="http://www.dhresource.com/fc/s009/08182014首页/b1.jpg" width="160"> 
+					  	</div> 
+				  	<p class="bs-pro-name">Crystal-beaded Mermaid Prom Dresses</p> 
+				  	<p class="bs-pro-piece"> From<strong>US $115.19</strong> / Piece</p> 
+				  	<p class="bs-pro-shopnow"> <img height="21" src="http://css.dhresource.com/buyer/home2/image/shop.jpg" width="86"> </p> 
+					</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		<!--section 6 end-->
+		 <div id="footer"><div style="margin:0 auto;width:100%;text-align:center; min-height:200px;padding-top:20px;">
+<div class="site-links"><a href="http://seller.dhgate.com/news/sf1.html" target="_parent">About</a>| | | <a href="http://seller.dhgate.com/news/sf3.html" target="_parent">About </a>| <a href="http://seller.dhgate.com/news/sf4.html" target="_parent">About</a>| <a href="http://seller.dhgate.com/edu" target="_parent">ChinaDirectSale动力营</a> | <a href="http://seller.dhgate.com/sellersitemap.html " target="_parent">Map</a>| <a href="http://seller.dhgate.com/pifa.html " target="_parent">About</a></div>
+
+<div class="copyright">Copyright Notice &copy; 2004 - 2013 ChinaDirectSale.com All rights reserved.<br />
+京ICP证050092号</div>
+</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>

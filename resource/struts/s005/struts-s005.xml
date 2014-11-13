@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+ 	<package name="search" extends="app_default" namespace="/">
+	 
+		<action name="psearch" class="com.dh.ora.s005.action.SearchAction" method="search">
+			<result name="list" >/s005/productlist.jsp</result>
+			<!-- <result name="list" >/s005/productlist.jsp</result> -->
+			<!-- <result name="list" type="freemarker">/ftl/s005/productlist.ftl</result>-->
+		</action>
+		
+		<action name="goodlist" class="com.dh.ora.s005.action.ShopCartAction" method="goodlist"/>
+		<action name="logout" class="com.dh.ora.s006.action.MemberAction" method="logout">
+			<result name="index" >/index.htm</result>
+		</action>
+		
+		<action name="item_*_*" class="com.dh.ora.s005.action.SearchAction" method="view">
+			<result name="ok" >/HTML/{1}/{1}-{2}.htm</result>
+		</action>	
+	</package>
+
+</struts>
+

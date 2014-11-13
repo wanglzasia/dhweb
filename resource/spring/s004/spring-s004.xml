@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       ">
+
+	<bean id="proKindSrv" class="com.dh.ora.s004.service.ProductKindSrvImpl" />
+	<bean id="defaultPageSrv" class="com.dh.ora.s004.service.DefaultPageSrvImpl" />
+	<bean id="adminSrv" class="com.dh.ora.s004.service.AdminSrvImpl" />
+	<bean id="courierSrv" class="com.dh.ora.s004.service.CourierSrvImpl" />
+
+
+
+</beans>

@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+body{margin:auto; padding:0; color:#2d374b;font-size:12px;font-family: Arial, Helvetica, sans-serif,HELVETICA;background:#fff;}
+#top_nav{BORDER-BOTTOM: #e8e8e8 1px solid;HEIGHT: 30px;COLOR:#666666;background-color:#F7F7F7;}
+#top_nav .top_nav_inner{width:950px;margin:0 auto;}
+#top_main{width:950px;margin:0 auto;padding-top:10px;}
+#body_section{width:950px;margin:0 auto;padding-top:10px;}
+#body_section .show_nav{padding: 8px 15px;border-radius: 3px;background-color: #FFF8EE; border-color: #ffbd7f;border: 1px solid #ffbd7f;}
+/*
+#menu_left{width:120px;float:left;}
+#menu_left ul{margin: 0;padding: 0;background: white;border-bottom: 1px solid #ffbd7f;text-align: left;color: #5f6f81;list-style: none;text-transform: none;line-height: 20px;border:1px solid #ffbd7f;width:100px;}
+#menu_left ul li {display: block;text-align: left;}
+#menu_left ul li a{display: block;height: 100%;text-decoration: none;color: #5f6f81;cursor: pointer;outline:none;padding:5px 5px 5px 10px;} 
+#menu_left ul li a:hover{background-color:#FF4500;color:#fff;}
+#menu_left ul li .sel_menu{background-color:#5f6f81;color:#fff;}
+*/
+
+#menu_left{width:120px;float:left;}
+#menu_left ul{margin: 0;padding: 0;background: white;border-bottom: 1px solid #e8e8e8;text-align: left;color: #5f6f81;list-style: none;text-transform: none;line-height: 20px;border:1px solid #e8e8e8;width:100px;}
+#menu_left ul li {display: block;text-align: left;padding-top:5px;}
+#menu_left ul li a{display: block;height: 100%;color: #5f6f81;cursor: pointer;outline:none;padding:5px 5px 5px 10px;}
+#menu_left ul li a:hover{color:blue;}
+#menu_left ul li .sel_menu{background-color:#5f6f81;color:#fff;}
+.title {background-color:#F7F7F7;color:#999; padding:5px 10px 5px 10px;border-bottom:1px solid #e8e8e8;font-size:12px;font-weight:bold;}
+
+.inf_box{margin:0 auto; border:1px solid #D0DFEB; height:80px;background-color:#EFF8FF;text-align:center;}
+.tip_info{margin:0 auto;width:300px;background:url(/public/img/20130425D.png)  no-repeat; background-position: 0 -106px;height:30px;margin-top:25px;padding-top:5px;}
+.con_info{background-color:#fff;}
+
+.tip_info_1{border: 1px solid #D0DFEB;background: #EFF8FF;line-height: 30px;text-align:center;color:#7ABD54;font-size:15px;padding:10px;font-weight:bold;}
+
+.main_content{min-height:400px;margin-top:10px;}
+
+#body_content{width:830px;float:left;}
+.show_nav_title{line-height:35px;font-size: 18px;font-weight: normal;margin-top:10px;}
+.data_list {width:100%;table-layout:fixed;empty-cells:show; border-collapse: collapse;margin:0 auto;}
+.data_list{border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+.data_list .title1{width:30px;background:#e6efff;}
+.data_list .tail{width:100px;border-left:1px solid #ddd;text-align:center;}
+.data_list .bottom_style{border-top:1px solid #ddd; padding:10px 10px 10px 10px;}
+.data_list .border_right{padding:10px 10px 10px 10px; width:100px;height:100px;}
+.seller_box{height:35px;background:#f1f1f1;border-color: #ddd; border-width: 1px 1px 1px 1px;border-style: solid;color: #039;line-height:35px;padding-left:10px;}
+
+.datalist{width:100%;table-layout:fixed;empty-cells:show; border-collapse: collapse;margin:0 auto;}
+.datalist td{border:1px solid #ddd;overflow:hidden;padding:5px 5px 5px 5px;}
+.datalist th{line-height:35px;background:#F7F7F7; border:1px solid #ddd;color:#999;}
+
+.datalist1{width:100%;table-layout:fixed;empty-cells:show; border-collapse: collapse;margin:0 auto;border-bottom:1px solid #ddd;border-left:1px solid #ddd;}
+.datalist1 td{overflow:hidden;padding:10px 10px 10px 10px;border-right:1px solid #ddd;}
+.order_title{line-height:35px;border-top:1px solid #ddd;border-left:1px solid #ddd;border-bottom:1px solid #ddd;border-right:1px solid #ddd;padding-left:10px;padding-right:10px;background:#F7F7F7;padding-bottom:10px;}
+
+.aa td{border:1px solid red;}
+
+.order_title_login{text-align:left;}
+.order_title_orderid{width:100px;text-align:left;}
+.order_title_ordertime{width:115px;text-align:left;}
+.order_title_price{text-align:right;}
+
+
+#footer{margin-top:20px;background-color:#F5F5F5; color:#2d374b;border-top:#e8e8e8 1px solid;}

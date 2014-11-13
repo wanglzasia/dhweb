@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<display-name>dhweb</display-name>  
+  <error-page>
+    <error-code>500</error-code>
+    <location>/common/error/500.jsp</location>
+  </error-page>
+    
+  <error-page>
+    <error-code>404</error-code>
+    <location>/common/error/404.jsp</location>
+  </error-page>
+      
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+			classpath:spring/**/*.xml
+		</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.x.orange.servlet.WebContextLoaderListenser</listener-class>
+  </listener>
+  
+  <!--字符过滤器-->
+  <!--
+	<filter>
+	   <filter-name>CharacterEncodingFilter</filter-name>
+	   <filter-class>com.dh.ora.servlet.CharacterEncodingFilter</filter-class>
+	   <init-param>
+	     <param-name>charset</param-name>
+	     <param-value>utf-8</param-value>
+	   </init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	-->
+	<!-- 验证码生成 -->
+	<servlet>
+    	<servlet-name>ImageServlet</servlet-name>
+    	<servlet-class>com.dh.ora.servlet.ImageServlet</servlet-class>
+  	</servlet>
+	<servlet-mapping>
+    	<servlet-name>ImageServlet</servlet-name>
+    	<url-pattern>/imageValid</url-pattern>
+  	</servlet-mapping>
+	
+	<!-- 登录过滤器 -->
+	<filter>
+	  <display-name>LoginFilter</display-name>
+	  <filter-name>LoginFilter</filter-name>
+	  <filter-class>com.dh.ora.servlet.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	  <filter-name>LoginFilter</filter-name>
+	  <url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+  
+  <!-- struts过滤器 -->
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>com.x.orange.servlet.STLocalFilterDispatcher</filter-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/classes/struts/</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  <servlet>
+    <servlet-name>JspSupportServlet</servlet-name>
+    <servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <jsp-config>
+    <taglib>
+      <taglib-uri>/OptionList</taglib-uri>
+      <taglib-location>/tld/OptionListTag.tld</taglib-location>
+    </taglib>
+  </jsp-config>
+</web-app>
